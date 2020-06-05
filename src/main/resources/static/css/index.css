@@ -1,0 +1,185 @@
+body {
+  font-family: Arial, Verdana,  sans-serif;
+  font-size: 11pt;
+  margin: 0;
+  color: #663300;
+  background: #FFFFCC;
+}
+
+.image {
+    position: relative;
+}
+
+nav{
+    margin: 0 0;
+    background: #B87333;
+}
+
+nav li{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0;
+}
+
+nav li:after{
+    display: inline-block;
+    padding: 10% 10%;
+    margin: 0;
+}
+
+.menu a {
+    text-decoration: none;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    letter-spacing: 2px;
+    position: relative;
+    font-size: 17px;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: color .2s;
+}
+
+.menu a:hover{color: #feb386;}
+
+.menu a:before,
+.menu a:after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    top: auto;
+    right: 50%;
+    bottom: -5px;
+    left: 50%;
+    background: #feb386;
+    transition: .8s;
+}
+
+.menu a:hover:before, .menu .active:before {left: 0;}
+.menu a:hover:after, .menu .active:after {right: 0;}
+
+.active{
+    content: none;
+    color: #704214;
+    background: #C19A6B;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    letter-spacing: 2px;
+    position: relative;
+    font-size: 17px;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: color .2s;
+}
+
+nav a{
+    text-decoration: none;
+    color: #704214;
+}
+
+nav ul{
+    padding: 5px;
+    text-align: center;
+}
+
+.site-title {
+    margin: 10px;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+    color: #663300;
+    font-size: 50px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 95%;
+}
+
+#title {
+    text-align: center;
+    padding-top: 20px;
+}
+
+#text {
+    margin: 3% 10% 5% 10%;
+}
+
+h3 {
+    top: 10px;
+    left: 10px;
+    width: 95%;
+}
+
+#in{
+    margin: 0 4% 0 1%;
+}
+
+.in{
+    margin: 5% 2% 2% 5%;
+}
+
+.form{
+    width: 40%;
+    background: #FFCC66;
+    margin: 5% 30% 5% 30%;
+    padding: 20px 20px 40px 40px;
+    border-radius: 20px;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+    color: #663300;
+    border: 3px solid;
+    border-radius: 5px;
+    padding: 5px 10px 5px 10px
+}
+
+table{
+    padding-left: 3%;
+}
+
+.button {
+    margin: 3% 10% 3% 0;
+    font-size: 20px;
+    color: #663300;
+	border: 3px solid;
+    border-radius: 5px;
+    background: #FFFFCC;
+	cursor: pointer;
+}
+
+#bought{
+    background: #979392
+}
+
+#free{
+    background: #66FF00;
+}
+
+.tickets {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    margin: 3% 10% 3% 0;
+    text-align: left;
+    border-collapse: separate;
+    border-spacing: 5px;
+    background: #ECE9E0;
+    color: #656665;
+    border: 16px solid #ECE9E0;
+    border-radius: 20px;
+}
+.th {
+    font-size: 18px;
+    padding: 10px;
+}
+.td {
+    background: #F5D7BF;
+    padding: 10px;
+}
+
+hr {
+    margin-top: 10%;
+    align: right;
+    height: 10px;
+    color: #663300;
+}
+
+#down {
+    text-align: center;
+}
+

@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="../static/css/index.css" type="text/css">
+    <link rel="shortcut icon" href="../static/img/icon.ico" type="image/x-icon">
+    <title>Sign in</title>
+</head>
+<body>
+    <div class="image">
+        <img src="/static/img/main.jpg" width = 100% alt = "поїзд" />
+        <h1 class="site-title">Poizd.ua</h1>
+    </div>
+
+    <div class="form">
+        <h2 id = "title">Sign in</h2>
+        <form action="/login" method="post">
+            <input type="hidden" name="_csrf" value="{{_csrf.token}}" />
+            <h3>Username:</h3> <label> <input type="text" name="username"/> </label>
+            <h3>Password:</h3> <label> <input type="password" name="password"/> </label>
+            <div><input class = "button" type="submit" value="Sign in"/></div>
+        </form>
+        <h3>Or</h3>
+        <a class = "button" href="/registration"> Registrate </a>
+    </div>
+
+    <hr/>
+    <h4 id = "down">Made: Mykhailichenko Illia, IP-73.</h4>
+</body>
+</html>

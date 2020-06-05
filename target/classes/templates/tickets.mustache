@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="../static/css/index.css" type="text/css">
+    <link rel="shortcut icon" href="../static/img/icon.ico" type="image/x-icon">
+    <title>Poizd.ua</title>
+</head>
+<body>
+    <div class="image">
+        <img src="/static/img/main.jpg" width = 100% alt = "поїзд" />
+        <h1 class="site-title">Poizd.ua</h1>
+    </div>
+    <nav>
+        <ul class = "menu">
+            <li><a href="/main">Main</a></li>
+            <li class="active">My tickets</li>
+            <li><a href="/login">Sign out</a></li>
+        </ul>
+    </nav>
+
+    <h2 id = "title">{{#title}}{{.}}{{/title}}</h2>
+    <table class="tickets">
+        <tr>
+            <th class="th">From</th><th  class="th">To</th>
+        <th class="th">Date</th><th class="th">Place</th><th class="th">Return</th>
+        </tr>
+        {{#tickets}}
+            <tr>
+                <td class="td">{{from}}</td>
+                <td class="td">{{to}}</td>
+                <td class="td">{{date}}</td>
+                <td class="td">{{num}}</td>
+                <td class="td">
+                    <form method="post" action="return">
+                        <input type="hidden" name="_csrf" value="{{_csrf.token}}" />
+                        <label><input type='hidden' name='id' value={{id}} /></label>
+                        <button class="button" type="submit">return</button>
+                    </form>
+                </td>
+            </tr>
+        {{/tickets}}
+    </table>
+
+    <hr/>
+    <h4 id = "down">Made: Mykhailichenko Illia, IP-73.</h4>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="../static/css/index.css" type="text/css">
+    <link rel="shortcut icon" href="../static/img/icon.ico" type="image/x-icon">
+    <title>Poizd.ua</title>
+</head>
+<body>
+    <div class="image">
+        <img src="/static/img/main.jpg" width = 100% alt = "поїзд" />
+        <h1 class="site-title">Poizd.ua</h1>
+    </div>
+    <nav>
+        <ul class = "menu">
+            <li class="active">Main</li>
+            <li><a href="/tickets">My tickets</a></li>
+            {{#flag}}<li><a href="/edit">Edit</a></li>{{/flag}}
+            <li><a href="/login">Sign out</a></li>
+        </ul>
+    </nav>
+
+    <div>
+        <h2 id = "title">Find ticket:</h2>
+        <form method="post" action="find">
+            <input type="hidden" name="_csrf" value="{{_csrf.token}}" />
+            <h3 class="in">From:<label id="in"><input required type="text" name="from" placeholder="Input city" /></label>
+            To:<label id="in"><input required type="text" name="to" placeholder="Input city" /></label>
+            Date:<label id="in"><input required type="date" id="start" name="date" value="2020-06-04" min="2020-06-04" max="2020-07-04"></label>
+            <button id = "in" class="button" type="submit">Find</button></h3>
+        </form>
+    </div>
+
+    <h2 id = "title">{{#title}}{{.}}{{/title}}</h2>
+    <table>
+        <tr>
+            {{#tickets}}
+            <td>
+                {{#buyer}}
+                    <form method="post" action="main">
+                        <input type="hidden" name="_csrf" value="{{_csrf.token}}" />
+                        <label><input type='hidden' name='id' value={{id}} /></label>
+                        <input disabled id="bought" class = "button" type="submit" value="{{num}}"/>
+                    </form>
+                {{/buyer}}
+                {{^buyer}}
+                    <form method="post" action="buy">
+                        <input type="hidden" name="_csrf" value="{{_csrf.token}}" />
+                        <label><input type='hidden' name='id' value={{id}} /></label>
+                        <input id="free" class = "button" type="submit" value="{{num}}"/>
+                    </form>
+                {{/buyer}}
+            </td>
+            {{/tickets}}
+        </tr>
+    </table>
+
+    <hr/>
+    <h4 id = "down">Made: Mykhailichenko Illia, IP-73.</h4>
+</body>
+</html>
