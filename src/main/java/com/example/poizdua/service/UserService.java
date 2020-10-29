@@ -27,7 +27,6 @@ public class UserService implements UserDetailsService {
     private MailSender mailSender;
 
     public boolean addUser(User user) {
-        //User userFromDb = userRepo.findByEmailOrUsername(user.getEmail(), user.getUsername());
         User userFromDb = userRepo.findByUsername(user.getUsername());
         if (userFromDb != null) {
             return false;

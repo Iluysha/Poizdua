@@ -41,7 +41,6 @@ public class MainController {
             model.put("title", "Tickets on " + date + " from " + from + " to " + to + " :");
             model.put("tickets", tickets);
         }
-
         return "main";
     }
 

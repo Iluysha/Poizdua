@@ -7,11 +7,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Poizdua" />
+        <module name="Poizd.ua" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Poizd.ua" options="-parameters" />
       <module name="Poizdua" options="-parameters" />
     </option>
   </component>
